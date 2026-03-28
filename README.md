@@ -30,7 +30,7 @@ Takes ~15–30 minutes. Only needs to run once.
 ```bash
 # DALL-E 3 (no GPU needed) + SRD self-correction
 python scripts/run_generation.py \
-    --prompt "Hindu god Yama seated on a water buffalo" \
+    --prompt "God Yama seated on a water buffalo" \
     --backbone dalle3 \
     --srd \
     --output output/
