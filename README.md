@@ -44,21 +44,21 @@ python scripts/run_generation.py \
 
 # SDXL (GPU) + SRD
 python scripts/run_generation.py \
-    --prompt "Kapala skull bowl Tibetan ritual object" \
+    --prompt "Kapala bowl" \
     --backbone sdxl \
     --srd \
     --output output/
 
 # Janus-Pro autoregressive (GPU) + SRD
 python scripts/run_generation.py \
-    --prompt "Zulu Isicholo traditional headdress" \
+    --prompt "Zulu Isicholo" \
     --backbone janus_pro \
     --srd \
     --output output/
 
 # Without SRD — RAVEL enrichment only, no iterative correction
 python scripts/run_generation.py \
-    --prompt "Ganda Bherunda two-headed mythical bird" \
+    --prompt "Ganda Bherunda bird" \
     --backbone dalle3 \
     --output output/
 ```
