@@ -207,6 +207,11 @@ def main() -> None:
 
         elif args.auto_generate:
             # Auto-generate: LLM generates entity list, save to extracted_entities/
+            # Use provided --sources, or fall back to curated domain sources
+            from src.kg.entity_generator import get_domain_sources
+            effective_sources = source_urls if source_urls else get_domain_sources(domain)
+            if effective_sources:
+                logger.info(f"  Using sources: {effective_sources}")
             logger.info(
                 f"Auto-generating {args.auto_generate} entities "
                 f"for '{domain}'..."
@@ -214,7 +219,7 @@ def main() -> None:
             path = generate_entity_list(
                 domain=domain,
                 n=args.auto_generate,
-                source_urls=source_urls,
+                source_urls=effective_sources,
             )
             entity_list_paths[domain] = path
 
@@ -251,8 +256,19 @@ def main() -> None:
         try:
             with Neo4jClient() as client:
                 client.ensure_constraints()
+
+                # Pass 1: load all nodes
                 for domain in domains:
                     run_loading(domain, client)
+
+                # Pass 2: cross-entity relationship extraction
+                # Runs after all nodes loaded so edges connect real nodes
+                logger.info("Running cross-entity relationship extraction pass...")
+                from src.kg.relationship_extractor import RelationshipExtractor
+                rel_extractor = RelationshipExtractor()
+                for domain in domains:
+                    rel_extractor.run(client, domain)
+
         except ConnectionError as e:
             logger.error(f"Neo4j connection failed: {e}")
             sys.exit(1)
