@@ -1,0 +1,697 @@
+2026-04-02 21:54:17,331 | DEBUG    | [#0000]  _: <POOL> created, routing address IPv4Address(('0e6d187a.databases.neo4j.io', 7687))
+2026-04-02 21:54:17,331 | DEBUG    | [#0000]  _: <WORKSPACE> resolve home database
+2026-04-02 21:54:17,331 | DEBUG    | [#0000]  _: <POOL> attempting to update routing table from IPv4Address(('0e6d187a.databases.neo4j.io', 7687))
+2026-04-02 21:54:17,331 | DEBUG    | [#0000]  _: <RESOLVE> in: 0e6d187a.databases.neo4j.io:7687
+2026-04-02 21:54:17,372 | DEBUG    | [#0000]  _: <RESOLVE> dns resolver out: 34.31.169.230:7687
+2026-04-02 21:54:17,372 | DEBUG    | [#0000]  _: <POOL> _acquire router connection, database=None, address=ResolvedIPv4Address(('34.31.169.230', 7687))
+2026-04-02 21:54:17,372 | DEBUG    | [#0000]  _: <POOL> trying to hand out new connection
+2026-04-02 21:54:17,381 | DEBUG    | [#0000]  C: <OPEN> 34.31.169.230:7687
+2026-04-02 21:54:17,413 | DEBUG    | [#D480]  C: <SECURE> 0e6d187a.databases.neo4j.io
+2026-04-02 21:54:17,446 | DEBUG    | [#D480]  C: <MAGIC> 0x6060B017
+2026-04-02 21:54:17,446 | DEBUG    | [#D480]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+2026-04-02 21:54:17,478 | DEBUG    | [#D480]  S: <HANDSHAKE> 0x000001FF [4] 0x00040404 0x00040405 0x00020805 0x00000006 0x00
+2026-04-02 21:54:17,478 | DEBUG    | [#D480]  C: <HANDSHAKE> 0x00000006 0x00
+2026-04-02 21:54:17,478 | DEBUG    | [#D480]  C: HELLO {'user_agent': 'neo4j-python/6.1.0 Python/3.10.20-final-0 (linux)', 'routing': {'address': '0e6d187a.databases.neo4j.io:7687'}, 'bolt_agent': {'product': 'neo4j-python/6.1.0', 'platform': 'Linux 5.14.0-611.13.1.el9_7.x86_64; x86_64', 'language': 'Python/3.10.20-final-0', 'language_details': 'CPython; 3.10.20-final-0 (main, Mar 11 2026 17:46:40) [GCC 14.3.0]'}}
+2026-04-02 21:54:17,478 | DEBUG    | [#D480]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+2026-04-02 21:54:17,478 | DEBUG    | [#D480]  C: LOGON {'scheme': 'basic', 'principal': '0e6d187a', 'credentials': '*******'}
+2026-04-02 21:54:17,478 | DEBUG    | [#D480]  _: <CONNECTION> client state: AUTHENTICATION > READY
+2026-04-02 21:54:17,510 | DEBUG    | [#D480]  S: SUCCESS {'server': 'Neo4j/5.27-aura', 'protocol_version': '6.0', 'connection_id': 'bolt-217881', 'hints': {'connection.recv_timeout_seconds': 60, 'ssr.enabled': True}}
+2026-04-02 21:54:17,510 | DEBUG    | [#D480]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+2026-04-02 21:54:17,512 | DEBUG    | [#D480]  S: SUCCESS {'advertised_address': 'p-mt-163021453c5e-13-0001.production-orch-0702.neo4j.io:7687'}
+2026-04-02 21:54:17,512 | DEBUG    | [#D480]  _: <CONNECTION> server state: AUTHENTICATION > READY
+2026-04-02 21:54:17,512 | DEBUG    | [#D480]  C: ROUTE {'address': '0e6d187a.databases.neo4j.io:7687'} () {}
+2026-04-02 21:54:17,544 | DEBUG    | [#D480]  S: SUCCESS {'rt': {'servers': [{'addresses': ['p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io:7687'], 'role': 'WRITE'}, {'addresses': ['p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io:7687'], 'role': 'READ'}, {'addresses': ['p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io:7687'], 'role': 'ROUTE'}], 'ttl': 10, 'db': '0e6d187a'}}
+2026-04-02 21:54:17,544 | DEBUG    | [#D480]  _: <POOL> released bolt-217881
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <ROUTING> updated table=RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10)
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <POOL> update routing table from address=ResolvedIPv4Address(('34.31.169.230', 7687)) (RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10))
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <WORKSPACE> pinning database: '0e6d187a'
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <POOL> acquire routing connection, access_mode='READ', database=AcquisitionDatabase(name='0e6d187a', guessed=False)
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <POOL> routing aged?, database=0e6d187a
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <ROUTING> purge check: last_updated_time=3228212.039601124, ttl=10, perf_time=3228212.039898037 => False
+2026-04-02 21:54:17,544 | DEBUG    | [#0000]  _: <ROUTING> checking table freshness (readonly=True): table expired=False, has_server_for_mode=True, table routers=OrderedSet((IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)))) => True
+2026-04-02 21:54:17,545 | DEBUG    | [#0000]  _: <POOL> using existing routing table RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10)
+2026-04-02 21:54:17,545 | DEBUG    | [#0000]  _: <POOL> acquire address, database='0e6d187a' address=IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687))
+2026-04-02 21:54:17,545 | DEBUG    | [#0000]  _: <POOL> trying to hand out new connection
+2026-04-02 21:54:17,545 | DEBUG    | [#0000]  _: <RESOLVE> in: p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io:7687
+2026-04-02 21:54:17,561 | DEBUG    | [#0000]  _: <RESOLVE> dns resolver out: 34.31.169.230:7687
+2026-04-02 21:54:17,561 | DEBUG    | [#0000]  C: <OPEN> 34.31.169.230:7687
+2026-04-02 21:54:17,592 | DEBUG    | [#D490]  C: <SECURE> p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io
+2026-04-02 21:54:17,626 | DEBUG    | [#D490]  C: <MAGIC> 0x6060B017
+2026-04-02 21:54:17,626 | DEBUG    | [#D490]  C: <HANDSHAKE> 0x000001FF 0x00080805 0x00020404 0x00000003
+2026-04-02 21:54:17,659 | DEBUG    | [#D490]  S: <HANDSHAKE> 0x000001FF [4] 0x00040404 0x00040405 0x00020805 0x00000006 0x00
+2026-04-02 21:54:17,659 | DEBUG    | [#D490]  C: <HANDSHAKE> 0x00000006 0x00
+2026-04-02 21:54:17,659 | DEBUG    | [#D490]  C: HELLO {'user_agent': 'neo4j-python/6.1.0 Python/3.10.20-final-0 (linux)', 'routing': {'address': '0e6d187a.databases.neo4j.io:7687'}, 'bolt_agent': {'product': 'neo4j-python/6.1.0', 'platform': 'Linux 5.14.0-611.13.1.el9_7.x86_64; x86_64', 'language': 'Python/3.10.20-final-0', 'language_details': 'CPython; 3.10.20-final-0 (main, Mar 11 2026 17:46:40) [GCC 14.3.0]'}}
+2026-04-02 21:54:17,660 | DEBUG    | [#D490]  _: <CONNECTION> client state: CONNECTED > AUTHENTICATION
+2026-04-02 21:54:17,660 | DEBUG    | [#D490]  C: LOGON {'scheme': 'basic', 'principal': '0e6d187a', 'credentials': '*******'}
+2026-04-02 21:54:17,660 | DEBUG    | [#D490]  _: <CONNECTION> client state: AUTHENTICATION > READY
+2026-04-02 21:54:17,693 | DEBUG    | [#D490]  S: SUCCESS {'server': 'Neo4j/5.27-aura', 'protocol_version': '6.0', 'connection_id': 'bolt-218170', 'hints': {'connection.recv_timeout_seconds': 60, 'ssr.enabled': True}}
+2026-04-02 21:54:17,693 | DEBUG    | [#D490]  _: <CONNECTION> server state: CONNECTED > AUTHENTICATION
+2026-04-02 21:54:17,694 | DEBUG    | [#D490]  S: SUCCESS {'advertised_address': 'p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io:7687'}
+2026-04-02 21:54:17,694 | DEBUG    | [#D490]  _: <CONNECTION> server state: AUTHENTICATION > READY
+2026-04-02 21:54:17,694 | DEBUG    | [#D490]  _: <POOL> released bolt-218170
+2026-04-02 21:54:17,694 | INFO     | Neo4j connected: neo4j+s://0e6d187a.databases.neo4j.io
+2026-04-02 21:54:17,761 | DEBUG    | [#0000]  _: <WORKSPACE> routing towards cached database: 0e6d187a
+2026-04-02 21:54:17,762 | DEBUG    | [#0000]  _: <POOL> acquire routing connection, access_mode='WRITE', database=AcquisitionDatabase(name='0e6d187a', guessed=True)
+2026-04-02 21:54:17,762 | DEBUG    | [#0000]  _: <POOL> routing aged?, database=0e6d187a
+2026-04-02 21:54:17,762 | DEBUG    | [#0000]  _: <ROUTING> purge check: last_updated_time=3228212.039601124, ttl=10, perf_time=3228212.257697292 => False
+2026-04-02 21:54:17,762 | DEBUG    | [#0000]  _: <ROUTING> checking table freshness (readonly=False): table expired=False, has_server_for_mode=True, table routers=OrderedSet((IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)))) => True
+2026-04-02 21:54:17,762 | DEBUG    | [#0000]  _: <POOL> using existing routing table RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10)
+2026-04-02 21:54:17,762 | DEBUG    | [#0000]  _: <POOL> acquire address, database='0e6d187a' address=IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687))
+2026-04-02 21:54:17,762 | DEBUG    | [#D490]  _: <POOL> picked existing connection bolt-218170
+2026-04-02 21:54:17,762 | DEBUG    | [#D490]  _: <POOL> checked re_auth auth=None updated=False force=False
+2026-04-02 21:54:17,763 | DEBUG    | [#D490]  _: <POOL> handing out existing connection
+2026-04-02 21:54:17,763 | DEBUG    | [#D490]  C: RUN 'MATCH (e:Entity) WHERE e.domain IS NOT NULL RETURN e.name AS name' {} {}
+2026-04-02 21:54:17,763 | DEBUG    | [#D490]  _: <CONNECTION> client state: READY > STREAMING
+2026-04-02 21:54:17,763 | DEBUG    | [#D490]  C: PULL {'n': 1000}
+2026-04-02 21:54:17,797 | DEBUG    | [#D490]  S: SUCCESS {'t_first': 1, 'fields': ['name'], 'db': '0e6d187a'}
+2026-04-02 21:54:17,797 | DEBUG    | [#D490]  _: <CONNECTION> server state: READY > STREAMING
+2026-04-02 21:54:17,797 | DEBUG    | [#0000]  _: <WORKSPACE> pinning database: '0e6d187a'
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,800 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,801 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,802 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,803 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,804 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,805 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,806 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,807 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,808 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,809 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,810 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,811 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,812 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,813 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,814 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,815 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,816 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,817 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,818 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,819 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,820 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,821 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,822 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,823 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,824 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,825 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,826 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,827 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,828 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,829 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,830 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,831 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,832 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,833 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,834 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,835 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,835 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,835 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:17,835 | DEBUG    | [#D490]  S: SUCCESS {'bookmark': 'FB:kcwQbkqCnCUUQ2uXIwuFeJOCZskUK5A=', 'statuses': [{'gql_status': '00000', 'status_description': 'note: successful completion'}], 'type': 'r', 't_last': 1, 'db': '0e6d187a'}
+2026-04-02 21:54:17,835 | DEBUG    | [#D490]  _: <CONNECTION> server state: STREAMING > READY
+2026-04-02 21:54:17,835 | DEBUG    | [#D490]  _: <POOL> released bolt-218170
+2026-04-02 21:54:17,835 | INFO     |   KG name cache: 460 enriched entities loaded
+2026-04-02 21:54:17,842 | INFO     | Retrieving context for: 'Velvet Worm'
+2026-04-02 21:54:18,244 | DEBUG    | Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-d9f3cde6-48f4-4ee5-9237-7954c8682bae', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You extract entity names and optional relational intent from a text-to-image prompt.\nThe entity could be a mythological figure, rare animal, plant, artifact, or phenomenon.\n\nRules:\n- Extract the most specific proper name(s) mentioned\n- Handle any capitalization (YAMA, yama, Yama → "Yama")\n- For descriptive references ("the Hindu god of death") resolve to the proper name\n- For relational queries ("Ram\'s wife", "Yama\'s mount", "Krishna\'s enemy")\n  extract BOTH the anchor entity AND a relationship type in UPPERCASE_SNAKE_CASE\n- If the prompt is very long, focus only on the first sentence\n\nReturn ONLY valid JSON:\n{\n  "entities": ["EntityName1", "EntityName2"],\n  "relational_intent": {\n    "anchor": "AnchorEntityName",\n    "relation": "RELATIONSHIP_TYPE"\n  }\n}\nSet relational_intent to null if no relational query detected.\nRelationship type examples: HAS_SPOUSE, RIDES, HAS_CHILD, HAS_PARENT,\nHAS_SIBLING, ENEMY_OF, ALLY_OF, WIELDS, RULES_OVER, TEACHER_OF, STUDENT_OF\nNo explanation, no markdown, just the JSON.'}, {'role': 'user', 'content': 'Velvet Worm'}], 'model': 'gpt-4o', 'max_tokens': 150, 'temperature': 0}}
+2026-04-02 21:54:18,258 | DEBUG    | Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2026-04-02 21:54:18,258 | DEBUG    | connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2026-04-02 21:54:18,266 | DEBUG    | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x15552bd38970>
+2026-04-02 21:54:18,266 | DEBUG    | start_tls.started ssl_context=<ssl.SSLContext object at 0x15552c607840> server_hostname='api.openai.com' timeout=5.0
+2026-04-02 21:54:18,276 | DEBUG    | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x15552bd387c0>
+2026-04-02 21:54:18,276 | DEBUG    | send_request_headers.started request=<Request [b'POST']>
+2026-04-02 21:54:18,277 | DEBUG    | send_request_headers.complete
+2026-04-02 21:54:18,277 | DEBUG    | send_request_body.started request=<Request [b'POST']>
+2026-04-02 21:54:18,277 | DEBUG    | send_request_body.complete
+2026-04-02 21:54:18,277 | DEBUG    | receive_response_headers.started request=<Request [b'POST']>
+2026-04-02 21:54:18,851 | DEBUG    | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 03 Apr 2026 01:54:18 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9e6471d04e298a7d-IAD'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'experiment-aawniq'), (b'openai-processing-ms', b'294'), (b'openai-project', b'proj_vAjBi7WmgGzFatchM4I8KfPS'), (b'openai-version', b'2020-10-01'), (b'x-openai-proxy-wasm', b'v0.1'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'30000000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'29999739'), (b'x-ratelimit-reset-requests', b'6ms'), (b'x-ratelimit-reset-tokens', b'0s'), (b'x-request-id', b'req_e04b65ea624d4c1697903dcc7ba8485a'), (b'set-cookie', b'__cf_bm=xyWkqopkc_FqsfPRcq8iLNaeJAv9JmEXIYZjkjERBxo-1775181258.2819974-1.0.1.1-24E8OxR0P.ZmEStD50EA94EU62tugpJusbsxpgHK8ih1Q3U1WFTEqsOKKinsIA2K7LabS66HntvUuvQNwFLVD0QzfaXoC4x_20A60QOKZQAKG7o0vdzepkQcsuf8p7oR; HttpOnly; Secure; Path=/; Domain=api.openai.com; Expires=Fri, 03 Apr 2026 02:24:18 GMT'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2026-04-02 21:54:18,851 | INFO     | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 21:54:18,852 | DEBUG    | receive_response_body.started request=<Request [b'POST']>
+2026-04-02 21:54:18,852 | DEBUG    | receive_response_body.complete
+2026-04-02 21:54:18,852 | DEBUG    | response_closed.started
+2026-04-02 21:54:18,852 | DEBUG    | response_closed.complete
+2026-04-02 21:54:18,852 | DEBUG    | HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Fri, 03 Apr 2026 01:54:18 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9e6471d04e298a7d-IAD', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'experiment-aawniq', 'openai-processing-ms': '294', 'openai-project': 'proj_vAjBi7WmgGzFatchM4I8KfPS', 'openai-version': '2020-10-01', 'x-openai-proxy-wasm': 'v0.1', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '30000000', 'x-ratelimit-remaining-requests': '9999', 'x-ratelimit-remaining-tokens': '29999739', 'x-ratelimit-reset-requests': '6ms', 'x-ratelimit-reset-tokens': '0s', 'x-request-id': 'req_e04b65ea624d4c1697903dcc7ba8485a', 'set-cookie': '__cf_bm=xyWkqopkc_FqsfPRcq8iLNaeJAv9JmEXIYZjkjERBxo-1775181258.2819974-1.0.1.1-24E8OxR0P.ZmEStD50EA94EU62tugpJusbsxpgHK8ih1Q3U1WFTEqsOKKinsIA2K7LabS66HntvUuvQNwFLVD0QzfaXoC4x_20A60QOKZQAKG7o0vdzepkQcsuf8p7oR; HttpOnly; Secure; Path=/; Domain=api.openai.com; Expires=Fri, 03 Apr 2026 02:24:18 GMT', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2026-04-02 21:54:18,852 | DEBUG    | request_id: req_e04b65ea624d4c1697903dcc7ba8485a
+2026-04-02 21:54:18,859 | INFO     |   Extracted: ['Velvet Worm'], relational: None
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <WORKSPACE> routing towards cached database: 0e6d187a
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <POOL> acquire routing connection, access_mode='WRITE', database=AcquisitionDatabase(name='0e6d187a', guessed=True)
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <POOL> routing aged?, database=0e6d187a
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <ROUTING> purge check: last_updated_time=3228212.039601124, ttl=10, perf_time=3228213.354620987 => False
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <ROUTING> checking table freshness (readonly=False): table expired=False, has_server_for_mode=True, table routers=OrderedSet((IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)))) => True
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <POOL> using existing routing table RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10)
+2026-04-02 21:54:18,859 | DEBUG    | [#0000]  _: <POOL> acquire address, database='0e6d187a' address=IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687))
+2026-04-02 21:54:18,859 | DEBUG    | [#D490]  _: <POOL> picked existing connection bolt-218170
+2026-04-02 21:54:18,859 | DEBUG    | [#D490]  _: <POOL> checked re_auth auth=None updated=False force=False
+2026-04-02 21:54:18,859 | DEBUG    | [#D490]  _: <POOL> handing out existing connection
+2026-04-02 21:54:18,860 | DEBUG    | [#D490]  C: RUN '\n        MATCH (e:Entity)\n        WHERE e.domain IS NOT NULL\n          AND (\n            toLower(e.name) = toLower($name)\n            OR any(a IN e.alternative_names WHERE toLower(a) = toLower($name))\n          )\n        RETURN e\n        LIMIT 1\n        ' {'name': 'Velvet Worm'} {}
+2026-04-02 21:54:18,860 | DEBUG    | [#D490]  C: PULL {'n': 1000}
+2026-04-02 21:54:18,894 | DEBUG    | [#D490]  S: SUCCESS {'t_first': 1, 'fields': ['e'], 'db': '0e6d187a'}
+2026-04-02 21:54:18,894 | DEBUG    | [#D490]  _: <CONNECTION> server state: READY > STREAMING
+2026-04-02 21:54:18,894 | DEBUG    | [#0000]  _: <WORKSPACE> pinning database: '0e6d187a'
+2026-04-02 21:54:18,896 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  S: SUCCESS {'bookmark': 'FB:kcwQbkqCnCUUQ2uXIwuFeJOCZskUK5A=', 'statuses': [{'gql_status': '00000', 'status_description': 'note: successful completion'}], 'type': 'r', 't_last': 2, 'db': '0e6d187a'}
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  _: <CONNECTION> server state: STREAMING > READY
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  _: <POOL> released bolt-218170
+2026-04-02 21:54:18,897 | INFO     |   Matched 'Velvet Worm' → 'Velvet Worm'
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <WORKSPACE> routing towards cached database: 0e6d187a
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <POOL> acquire routing connection, access_mode='WRITE', database=AcquisitionDatabase(name='0e6d187a', guessed=True)
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <POOL> routing aged?, database=0e6d187a
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <ROUTING> purge check: last_updated_time=3228212.039601124, ttl=10, perf_time=3228213.392438231 => False
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <ROUTING> checking table freshness (readonly=False): table expired=False, has_server_for_mode=True, table routers=OrderedSet((IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)))) => True
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <POOL> using existing routing table RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10)
+2026-04-02 21:54:18,897 | DEBUG    | [#0000]  _: <POOL> acquire address, database='0e6d187a' address=IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687))
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  _: <POOL> picked existing connection bolt-218170
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  _: <POOL> checked re_auth auth=None updated=False force=False
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  _: <POOL> handing out existing connection
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  C: RUN '\n            MATCH (e:Entity {name: $name})-[*1..1]-(nb:Entity)\n            WHERE nb.domain IS NOT NULL AND nb.name <> $name\n            RETURN DISTINCT nb\n            LIMIT 10\n            ' {'name': 'Velvet Worm'} {}
+2026-04-02 21:54:18,897 | DEBUG    | [#D490]  C: PULL {'n': 1000}
+2026-04-02 21:54:18,931 | DEBUG    | [#D490]  S: SUCCESS {'t_first': 1, 'fields': ['nb'], 'db': '0e6d187a'}
+2026-04-02 21:54:18,931 | DEBUG    | [#D490]  _: <CONNECTION> server state: READY > STREAMING
+2026-04-02 21:54:18,931 | DEBUG    | [#0000]  _: <WORKSPACE> pinning database: '0e6d187a'
+2026-04-02 21:54:18,931 | DEBUG    | [#D490]  S: SUCCESS {'bookmark': 'FB:kcwQbkqCnCUUQ2uXIwuFeJOCZskUK5A=', 'statuses': [{'gql_status': '02000', 'status_description': 'note: no data'}], 'type': 'r', 't_last': 0, 'db': '0e6d187a'}
+2026-04-02 21:54:18,931 | DEBUG    | [#D490]  _: <CONNECTION> server state: STREAMING > READY
+2026-04-02 21:54:18,931 | DEBUG    | [#D490]  _: <POOL> released bolt-218170
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <WORKSPACE> routing towards cached database: 0e6d187a
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <POOL> acquire routing connection, access_mode='WRITE', database=AcquisitionDatabase(name='0e6d187a', guessed=True)
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <POOL> routing aged?, database=0e6d187a
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <ROUTING> purge check: last_updated_time=3228212.039601124, ttl=10, perf_time=3228213.427122713 => False
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <ROUTING> checking table freshness (readonly=False): table expired=False, has_server_for_mode=True, table routers=OrderedSet((IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)))) => True
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <POOL> using existing routing table RoutingTable(database='0e6d187a', routers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), readers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), writers=(IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687)),), last_updated_time=3228212.039601124, ttl=10)
+2026-04-02 21:54:18,932 | DEBUG    | [#0000]  _: <POOL> acquire address, database='0e6d187a' address=IPv4Address(('p-mt-163021453c5e-13-0003.production-orch-0702.neo4j.io', 7687))
+2026-04-02 21:54:18,932 | DEBUG    | [#D490]  _: <POOL> picked existing connection bolt-218170
+2026-04-02 21:54:18,932 | DEBUG    | [#D490]  _: <POOL> checked re_auth auth=None updated=False force=False
+2026-04-02 21:54:18,932 | DEBUG    | [#D490]  _: <POOL> handing out existing connection
+2026-04-02 21:54:18,932 | DEBUG    | [#D490]  C: RUN '\n        MATCH (a:Entity)-[r]->(b:Entity)\n        WHERE a.name IN $names OR b.name IN $names\n        RETURN a.name AS from_node, type(r) AS rel_type, b.name AS to_node\n        LIMIT 50\n        ' {'names': ['Velvet Worm']} {}
+2026-04-02 21:54:18,932 | DEBUG    | [#D490]  C: PULL {'n': 1000}
+2026-04-02 21:54:18,966 | DEBUG    | [#D490]  S: SUCCESS {'t_first': 1, 'fields': ['from_node', 'rel_type', 'to_node'], 'db': '0e6d187a'}
+2026-04-02 21:54:18,966 | DEBUG    | [#D490]  _: <CONNECTION> server state: READY > STREAMING
+2026-04-02 21:54:18,966 | DEBUG    | [#0000]  _: <WORKSPACE> pinning database: '0e6d187a'
+2026-04-02 21:54:18,972 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,972 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,972 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,972 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,972 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,972 | DEBUG    | [#D490]  S: RECORD * 1
+2026-04-02 21:54:18,973 | DEBUG    | [#D490]  S: SUCCESS {'bookmark': 'FB:kcwQbkqCnCUUQ2uXIwuFeJOCZskUK5A=', 'statuses': [{'gql_status': '00000', 'status_description': 'note: successful completion'}], 'type': 'r', 't_last': 6, 'db': '0e6d187a'}
+2026-04-02 21:54:18,973 | DEBUG    | [#D490]  _: <CONNECTION> server state: STREAMING > READY
+2026-04-02 21:54:18,973 | DEBUG    | [#D490]  _: <POOL> released bolt-218170
+2026-04-02 21:54:18,973 | INFO     |   ContextPacket: 1 primary, 0 neighbours, 13 attributes, 6 relationships
+2026-04-02 21:54:18,973 | INFO     | ============================================================
+2026-04-02 21:54:18,973 | INFO     | RETRIEVED ENTITIES
+2026-04-02 21:54:18,973 | INFO     | ============================================================
+2026-04-02 21:54:18,973 | INFO     |   Name      : Velvet Worm
+2026-04-02 21:54:18,973 | INFO     |   Domain    : biology
+2026-04-02 21:54:18,973 | INFO     |   Morphology: elongate, soft-bodied with a flattened cylindrical body cross-section
+2026-04-02 21:54:18,973 | INFO     |   Features  : ['numerous unstructured body appendages known as oncopods or lobopods', 'velvety texture', 'slender antennae on the first head segment']
+2026-04-02 21:54:18,973 | INFO     |   Colors    : ['orange', 'red', 'brown', 'green', 'blue', 'gold', 'white']
+2026-04-02 21:54:18,973 | INFO     |   Texture   : velvety
+2026-04-02 21:54:18,973 | INFO     |   Size      : 0.1 to 22 cm in length
+2026-04-02 21:54:18,973 | INFO     | ============================================================
+2026-04-02 21:54:18,973 | INFO     | RELATIONSHIPS
+2026-04-02 21:54:18,973 | INFO     | ============================================================
+2026-04-02 21:54:18,973 | INFO     |   (Velvet Worm) -[ENDEMIC_TO]-> (terrestrial environments)
+2026-04-02 21:54:18,973 | INFO     |   (Velvet Worm) -[CLOSE_RELATIVE_OF]-> (Arthropoda)
+2026-04-02 21:54:18,973 | INFO     |   (Velvet Worm) -[CLOSE_RELATIVE_OF]-> (Tardigrada)
+2026-04-02 21:54:18,973 | INFO     |   (Arthropoda) -[INVERSE_CLOSE_RELATIVE_OF]-> (Velvet Worm)
+2026-04-02 21:54:18,973 | INFO     |   (Tardigrada) -[INVERSE_CLOSE_RELATIVE_OF]-> (Velvet Worm)
+2026-04-02 21:54:18,973 | INFO     |   (terrestrial environments) -[HAS_ENDEMIC_SPECIES]-> (Velvet Worm)
+2026-04-02 21:54:18,973 | INFO     | ============================================================
+2026-04-02 21:54:18,973 | INFO     | CONTRASTIVE CONSTRAINTS
+2026-04-02 21:54:18,973 | INFO     | ============================================================
+2026-04-02 21:54:18,973 | INFO     |   NOT caterpillar
+2026-04-02 21:54:18,973 | INFO     |   NOT smooth texture
+2026-04-02 21:54:18,973 | INFO     |   NOT aquatic environment
+2026-04-02 21:54:18,974 | DEBUG    | Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-b37730be-992e-437d-968b-de695ec34575', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You write a precise contrastive visual sub-prompt for a single rare entity\nfor use in a text-to-image generation pipeline.\n\nCover ALL of the following attribute categories (skip only if genuinely N/A):\n\n1. PHYSICAL PROPERTIES — exact body structure, number of arms/heads/limbs,\n   overall form, size, proportions\n2. APPEARANCE / MORPHOLOGY — colors (be specific: "storm-cloud dark blue",\n   not "dark"), texture (smooth/scaly/feathered), surface quality\n3. UNIQUE FACTS — what makes this entity visually unlike anything common\n4. FUNCTIONAL PROPERTIES — what it does, its role, powers, ecological function\n5. PERSONALITY TRAITS / BEHAVIOR — emotional expression, posture, demeanor\n   (important for mythological figures and animals)\n6. MATERIAL & COMPOSITION — what it is made of or composed of (for artifacts)\n   or biological makeup (for organisms)\n7. USAGE CONTEXT / SYMBOLIC ITEMS — what it carries, wears, is associated with\n8. ORIGIN & HISTORY — cultural/geographic grounding, era, tradition\n9. DISTINCTIVE FEATURES with NOT-X constraints — at least 2 explicit\n   "NOT [generic alternative]" phrases that prevent the model defaulting\n   to a common prior. Example: "NOT a western grim reaper", "NOT a generic deer"\n\nWrite a dense, vivid paragraph (60-100 words) covering as many of these\nas possible. Do NOT use numbered lists — write as flowing descriptive prose.\nReturn ONLY the sub-prompt text.'}, {'role': 'user', 'content': 'Entity: Velvet Worm\nDomain: biology\nType: Onychophora\n\nPhysical / Visual attributes:\n  Morphology: elongate, soft-bodied with a flattened cylindrical body cross-section\n  Distinctive features: numerous unstructured body appendages known as oncopods or lobopods; velvety texture; slender antennae on the first head segment\n  Colors: orange, red, brown, green, blue, gold, white\n  Texture: velvety\n  Size: 0.1 to 22 cm in length\n  Structure: segmented body with rows of stub feet\n\nFunctional / Contextual:\n  Primary function: predator of other invertebrates\n  Origin: terrestrial environments\n  Cultural significance: interest in evolutionary biology and paleontology\n  Historical period: Late Carboniferous to Late Cretaceous for fossil species\n\nContrastive constraints (must appear as NOT-X in your sub-prompt):\n  - NOT caterpillar\n  - NOT smooth texture\n  - NOT aquatic environment\n\nWrite the contrastive sub-prompt for Velvet Worm now.'}], 'model': 'gpt-4o', 'max_tokens': 250, 'temperature': 0.3}}
+2026-04-02 21:54:18,975 | DEBUG    | Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2026-04-02 21:54:18,975 | DEBUG    | connect_tcp.started host='api.openai.com' port=443 local_address=None timeout=5.0 socket_options=None
+2026-04-02 21:54:18,982 | DEBUG    | connect_tcp.complete return_value=<httpcore._backends.sync.SyncStream object at 0x15552bd3a8f0>
+2026-04-02 21:54:18,982 | DEBUG    | start_tls.started ssl_context=<ssl.SSLContext object at 0x15552c494740> server_hostname='api.openai.com' timeout=5.0
+2026-04-02 21:54:18,992 | DEBUG    | start_tls.complete return_value=<httpcore._backends.sync.SyncStream object at 0x15552bd3a980>
+2026-04-02 21:54:18,992 | DEBUG    | send_request_headers.started request=<Request [b'POST']>
+2026-04-02 21:54:18,992 | DEBUG    | send_request_headers.complete
+2026-04-02 21:54:18,992 | DEBUG    | send_request_body.started request=<Request [b'POST']>
+2026-04-02 21:54:18,992 | DEBUG    | send_request_body.complete
+2026-04-02 21:54:18,992 | DEBUG    | receive_response_headers.started request=<Request [b'POST']>
+2026-04-02 21:54:21,042 | DEBUG    | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 03 Apr 2026 01:54:21 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9e6471d4ba5fd647-IAD'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'experiment-aawniq'), (b'openai-processing-ms', b'1740'), (b'openai-project', b'proj_vAjBi7WmgGzFatchM4I8KfPS'), (b'openai-version', b'2020-10-01'), (b'x-openai-proxy-wasm', b'v0.1'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'30000000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'29999407'), (b'x-ratelimit-reset-requests', b'6ms'), (b'x-ratelimit-reset-tokens', b'1ms'), (b'x-request-id', b'req_be661bc29de34becaaf34d096c7252f1'), (b'set-cookie', b'__cf_bm=_zFqUnlf_hLPGJ8YgmKWC33u40u5R_vOARWhMYeHjfM-1775181258.9969192-1.0.1.1-fXMTBqVZc0qx4EPBuZAPwyyHj4.oaDWYdXRJHgxrYrytoq9xeo5fc7jPfSMBEUS4TUFXOg7cxdV8okqV_fdrYQJIJb63V1ViTOItkVoYPZXaACDENmR9uelFiDCqQ_Uj; HttpOnly; Secure; Path=/; Domain=api.openai.com; Expires=Fri, 03 Apr 2026 02:24:21 GMT'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2026-04-02 21:54:21,043 | INFO     | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 21:54:21,043 | DEBUG    | receive_response_body.started request=<Request [b'POST']>
+2026-04-02 21:54:21,065 | DEBUG    | receive_response_body.complete
+2026-04-02 21:54:21,065 | DEBUG    | response_closed.started
+2026-04-02 21:54:21,065 | DEBUG    | response_closed.complete
+2026-04-02 21:54:21,065 | DEBUG    | HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Fri, 03 Apr 2026 01:54:21 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9e6471d4ba5fd647-IAD', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'experiment-aawniq', 'openai-processing-ms': '1740', 'openai-project': 'proj_vAjBi7WmgGzFatchM4I8KfPS', 'openai-version': '2020-10-01', 'x-openai-proxy-wasm': 'v0.1', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '30000000', 'x-ratelimit-remaining-requests': '9999', 'x-ratelimit-remaining-tokens': '29999407', 'x-ratelimit-reset-requests': '6ms', 'x-ratelimit-reset-tokens': '1ms', 'x-request-id': 'req_be661bc29de34becaaf34d096c7252f1', 'set-cookie': '__cf_bm=_zFqUnlf_hLPGJ8YgmKWC33u40u5R_vOARWhMYeHjfM-1775181258.9969192-1.0.1.1-fXMTBqVZc0qx4EPBuZAPwyyHj4.oaDWYdXRJHgxrYrytoq9xeo5fc7jPfSMBEUS4TUFXOg7cxdV8okqV_fdrYQJIJb63V1ViTOItkVoYPZXaACDENmR9uelFiDCqQ_Uj; HttpOnly; Secure; Path=/; Domain=api.openai.com; Expires=Fri, 03 Apr 2026 02:24:21 GMT', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2026-04-02 21:54:21,065 | DEBUG    | request_id: req_be661bc29de34becaaf34d096c7252f1
+2026-04-02 21:54:21,065 | INFO     |   Sub-prompt for 'Velvet Worm': The velvet worm, an enigmatic creature from the phylum Onychophora, boasts an el...
+2026-04-02 21:54:21,066 | DEBUG    | Request options: {'method': 'post', 'url': '/chat/completions', 'files': None, 'idempotency_key': 'stainless-python-retry-bf2b0f71-051b-4578-95df-2267c0abec16', 'content': None, 'json_data': {'messages': [{'role': 'system', 'content': 'You are composing a final text-to-image prompt by merging per-entity\ncontrastive sub-prompts into one coherent scene.\n\nRules:\n1. Every entity sub-prompt below must be fully represented — do not drop\n   any entity\'s visual details or NOT-X constraints\n2. Describe how the entities relate to each other visually in the scene,\n   based on their relationship type\n3. Maintain the original query\'s intent — if the query asks for\n   "Yama and his sister", both Yama AND Yami must be prominent\n4. Compose as ONE flowing paragraph of vivid, specific imagery\n5. Keep all NOT-X constraints from all sub-prompts\n6. Do NOT add generic quality tags like "8k masterpiece" or "photorealistic"\n   unless they are domain-appropriate\n\nReturn ONLY the final merged prompt.'}, {'role': 'user', 'content': 'ORIGINAL QUERY: "Velvet Worm"\n\nRELATIONSHIP CONTEXT:\n  (Velvet Worm) --[ENDEMIC_TO]--> (terrestrial environments)\n  (Velvet Worm) --[CLOSE_RELATIVE_OF]--> (Arthropoda)\n  (Velvet Worm) --[CLOSE_RELATIVE_OF]--> (Tardigrada)\n  (Arthropoda) --[INVERSE_CLOSE_RELATIVE_OF]--> (Velvet Worm)\n  (Tardigrada) --[INVERSE_CLOSE_RELATIVE_OF]--> (Velvet Worm)\n  (terrestrial environments) --[HAS_ENDEMIC_SPECIES]--> (Velvet Worm)\n\nPER-ENTITY SUB-PROMPTS:\n[Velvet Worm]\nThe velvet worm, an enigmatic creature from the phylum Onychophora, boasts an elongate, soft-bodied form with a flattened cylindrical cross-section. Its segmented body, ranging from 0.1 to 22 cm, is adorned with numerous unstructured appendages known as oncopods or lobopods, giving it a distinct velvety texture that is NOT smooth. This terrestrial predator, cloaked in hues of orange, red, brown, green, blue, gold, and white, features slender antennae on its first head segment. Unlike a caterpillar, the velvet worm thrives in terrestrial environments, NOT aquatic, and holds significant interest in evolutionary biology and paleontology, tracing back to the Late Carboniferous era.\n\nMerge these into one coherent scene prompt that captures all entities\nas described above with their relationship visually expressed.'}], 'model': 'gpt-4o', 'max_tokens': 600, 'temperature': 0.3}}
+2026-04-02 21:54:21,066 | DEBUG    | Sending HTTP Request: POST https://api.openai.com/v1/chat/completions
+2026-04-02 21:54:21,067 | DEBUG    | send_request_headers.started request=<Request [b'POST']>
+2026-04-02 21:54:21,067 | DEBUG    | send_request_headers.complete
+2026-04-02 21:54:21,067 | DEBUG    | send_request_body.started request=<Request [b'POST']>
+2026-04-02 21:54:21,067 | DEBUG    | send_request_body.complete
+2026-04-02 21:54:21,067 | DEBUG    | receive_response_headers.started request=<Request [b'POST']>
+2026-04-02 21:54:24,142 | DEBUG    | receive_response_headers.complete return_value=(b'HTTP/1.1', 200, b'OK', [(b'Date', b'Fri, 03 Apr 2026 01:54:24 GMT'), (b'Content-Type', b'application/json'), (b'Transfer-Encoding', b'chunked'), (b'Connection', b'keep-alive'), (b'CF-Ray', b'9e6471e1bda9d647-IAD'), (b'CF-Cache-Status', b'DYNAMIC'), (b'Server', b'cloudflare'), (b'Strict-Transport-Security', b'max-age=31536000; includeSubDomains; preload'), (b'X-Content-Type-Options', b'nosniff'), (b'access-control-expose-headers', b'X-Request-ID'), (b'openai-organization', b'experiment-aawniq'), (b'openai-processing-ms', b'3013'), (b'openai-project', b'proj_vAjBi7WmgGzFatchM4I8KfPS'), (b'openai-version', b'2020-10-01'), (b'x-openai-proxy-wasm', b'v0.1'), (b'x-ratelimit-limit-requests', b'10000'), (b'x-ratelimit-limit-tokens', b'30000000'), (b'x-ratelimit-remaining-requests', b'9999'), (b'x-ratelimit-remaining-tokens', b'29999489'), (b'x-ratelimit-reset-requests', b'6ms'), (b'x-ratelimit-reset-tokens', b'1ms'), (b'x-request-id', b'req_6e37076af7884ce58eb8973007f20e29'), (b'Content-Encoding', b'gzip'), (b'alt-svc', b'h3=":443"; ma=86400')])
+2026-04-02 21:54:24,142 | INFO     | HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 21:54:24,143 | DEBUG    | receive_response_body.started request=<Request [b'POST']>
+2026-04-02 21:54:24,148 | DEBUG    | receive_response_body.complete
+2026-04-02 21:54:24,148 | DEBUG    | response_closed.started
+2026-04-02 21:54:24,148 | DEBUG    | response_closed.complete
+2026-04-02 21:54:24,148 | DEBUG    | HTTP Response: POST https://api.openai.com/v1/chat/completions "200 OK" Headers({'date': 'Fri, 03 Apr 2026 01:54:24 GMT', 'content-type': 'application/json', 'transfer-encoding': 'chunked', 'connection': 'keep-alive', 'cf-ray': '9e6471e1bda9d647-IAD', 'cf-cache-status': 'DYNAMIC', 'server': 'cloudflare', 'strict-transport-security': 'max-age=31536000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'access-control-expose-headers': 'X-Request-ID', 'openai-organization': 'experiment-aawniq', 'openai-processing-ms': '3013', 'openai-project': 'proj_vAjBi7WmgGzFatchM4I8KfPS', 'openai-version': '2020-10-01', 'x-openai-proxy-wasm': 'v0.1', 'x-ratelimit-limit-requests': '10000', 'x-ratelimit-limit-tokens': '30000000', 'x-ratelimit-remaining-requests': '9999', 'x-ratelimit-remaining-tokens': '29999489', 'x-ratelimit-reset-requests': '6ms', 'x-ratelimit-reset-tokens': '1ms', 'x-request-id': 'req_6e37076af7884ce58eb8973007f20e29', 'content-encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400'})
+2026-04-02 21:54:24,148 | DEBUG    | request_id: req_6e37076af7884ce58eb8973007f20e29
+2026-04-02 21:54:24,148 | INFO     |   Enriched prompt synthesised (1112 chars)
+2026-04-02 21:54:24,148 | INFO     | ============================================================
+2026-04-02 21:54:24,149 | INFO     | PER-ENTITY SUB-PROMPTS (Step 2 CoT)
+2026-04-02 21:54:24,149 | INFO     | ============================================================
+2026-04-02 21:54:24,149 | INFO     | [Velvet Worm]
+2026-04-02 21:54:24,149 | INFO     | The velvet worm, an enigmatic creature from the phylum Onychophora, boasts an elongate, soft-bodied form with a flattened cylindrical cross-section. Its segmented body, ranging from 0.1 to 22 cm, is adorned with numerous unstructured appendages known as oncopods or lobopods, giving it a distinct velvety texture that is NOT smooth. This terrestrial predator, cloaked in hues of orange, red, brown, green, blue, gold, and white, features slender antennae on its first head segment. Unlike a caterpillar, the velvet worm thrives in terrestrial environments, NOT aquatic, and holds significant interest in evolutionary biology and paleontology, tracing back to the Late Carboniferous era.
+2026-04-02 21:54:24,149 | INFO     | ============================================================
+2026-04-02 21:54:24,149 | INFO     | FINAL ENRICHED PROMPT (Step 3 Merge)
+2026-04-02 21:54:24,149 | INFO     | ============================================================
+2026-04-02 21:54:24,149 | INFO     | In a lush terrestrial environment, a velvet worm, an enigmatic creature from the phylum Onychophora, slinks gracefully across the forest floor. Its elongate, soft-bodied form, with a flattened cylindrical cross-section, is vividly adorned in a spectrum of colors including orange, red, brown, green, blue, gold, and white. The segmented body, measuring between 0.1 to 22 cm, is covered with numerous unstructured appendages called oncopods or lobopods, giving it a distinct velvety texture that is notably NOT smooth. This terrestrial predator, with slender antennae protruding from its first head segment, navigates the undergrowth, showcasing its evolutionary ties to both the Arthropoda and Tardigrada. The scene captures the velvet worm's ancient lineage, tracing back to the Late Carboniferous era, as it moves through its endemic terrestrial habitat, emphasizing its unique position in evolutionary biology and paleontology. The environment, rich with foliage and earth tones, highlights the velvet worm's terrestrial nature, distinctly NOT aquatic, as it explores the vibrant ecosystem that it calls home.
+2026-04-02 21:54:24,149 | DEBUG    | [#0000]  _: <POOL> close
+2026-04-02 21:54:24,149 | DEBUG    | [#D480]  C: GOODBYE
+2026-04-02 21:54:24,149 | DEBUG    | [#D480]  C: <CLOSE>
+2026-04-02 21:54:24,149 | DEBUG    | [#D490]  C: GOODBYE
+2026-04-02 21:54:24,149 | DEBUG    | [#D490]  C: <CLOSE>
+2026-04-02 21:54:24,149 | INFO     | Neo4j: driver closed.
+2026-04-02 21:54:24,149 | INFO     | Done. Log saved to logs/velvet_worm_pipeline.log
+2026-04-02 21:54:24,210 | DEBUG    | close.started
+2026-04-02 21:54:24,211 | DEBUG    | close.complete
+2026-04-02 21:54:24,211 | DEBUG    | close.started
+2026-04-02 21:54:24,211 | DEBUG    | close.complete
