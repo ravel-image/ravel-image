@@ -1,0 +1,40 @@
+{
+  "concept_name": "Goddess Ganga",
+  "base_image_model": "glm-image",
+  "base_llm": "gpt-5.2",
+  "conditions": {
+    "zero_shot_concept_completion": {
+      "prompt": "A divine representation of Ganga as a living river goddess, elegant feminine figure standing in flowing water, her presence both powerful and calming, garments and hair merging fluidly with water movement, luminous aura, soft tones dominating the scene, gentle mist and light rays enhancing the spiritual atmosphere, ultra-realistic textures, cinematic depth, highly detailed composition"
+    },
+    "cot_prompt_expansion": {
+      "prompt": "A divine river goddess embodying purity and flow, a luminous feminine figure formed from layered water currents, long flowing hair merging with river streams, dressed in a flowing sari that dissolves into water at the edges, holding a small water vessel, standing on a calm sacred river surface, a makara beside her, tranquil expression, soft blue and silver tones, Himalayan landscape, atmospheric mist, highly detailed textures, cinematic lighting, ultra-realistic rendering"
+    },
+    "search_enabled_cot": {
+      "prompt": "Ganga, a Hindu river goddess, described in mythology as a celestial being who descended from heaven to Earth, associated with purity, salvation, and life-giving water. She is often depicted as a beautiful woman wearing a white sari, riding a makara (a mythical aquatic creature), and holding a water vessel (kalash). Generate a highly detailed, photorealistic image of Ganga standing gracefully on flowing water, with a makara beside her, calm and compassionate expression, luminous aura, Himalayan background, accurate cultural iconography, cinematic lighting, ultra-realistic textures"
+    },
+    "iterative_correction": {
+      "corrections": [
+        {
+          "iteration": 1,
+          "prompt": "Goddess Ganga standing in a flowing sacred river, depicted as a divine river deity rather than an ordinary human, her lower body and garments seamlessly blending into translucent flowing water, long dark hair moving naturally with wind and currents, wearing a white and soft blue sari with intricate traditional patterns, serene and compassionate expression, a soft natural glow surrounding her presence, water subtly reacting to her with gentle ripples and splashes, misty Himalayan landscape in the background, cinematic natural lighting, ultra-realistic textures, highly detailed, 8k"
+        },
+        {
+          "iteration": 2,
+          "prompt": "Mythologically grounded depiction of Goddess Ganga standing in a sacred river, wearing a detailed white and pale blue sari with traditional Indian design elements, holding an ornate kalash with engraved patterns and subtle sacred detailing, her form partially integrated with flowing water, long dark hair, calm and divine expression, natural lighting with soft highlights, realistic river environment with stones and reflections, culturally authentic and photorealistic, ultra-detailed, cinematic composition"
+        },
+        {
+          "iteration": 3,
+          "prompt": "Goddess Ganga depicted as a celestial river goddess descending into Earth, standing gracefully in a flowing river, her form partially composed of water merging seamlessly with her sari and surroundings, long flowing dark hair, wearing a white-blue sari, holding a kalash, serene expression, a subtle stream of water descending from above behind her suggesting divine origin, misty Himalayan mountains in the background, soft volumetric lighting, cinematic realism, ultra-detailed textures"
+        },
+        {
+          "iteration": 4,
+          "prompt": "Divine depiction of Goddess Ganga as a living river entity, a graceful feminine figure with her body partially formed from translucent flowing water, standing in a sacred river, white and pale blue sari dissolving into water at the edges, long dark hair flowing naturally, holding a traditional kalash, serene and peaceful expression, a subtle luminous aura integrated naturally into the lighting, water responding fluidly around her, realistic yet clearly divine, cinematic lighting, ultra-realistic, highly detailed"
+        },
+        {
+          "iteration": 5,
+          "prompt": "Cinematic composition of Goddess Ganga as a sacred river goddess, centered in a flowing Himalayan river, her form blending harmoniously with water, wearing a white and soft blue sari with fine detailing, holding an ornate kalash, long flowing hair, serene expression, a faint makara subtly visible near the water, gentle ripples and splashes around her, soft mist and distant mountains creating depth, natural golden-hour lighting, highly detailed textures, balanced composition, photorealistic, 8k"
+        }
+      ]
+    }
+  }
+}
