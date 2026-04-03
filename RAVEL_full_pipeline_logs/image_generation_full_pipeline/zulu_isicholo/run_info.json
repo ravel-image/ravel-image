@@ -39,37 +39,37 @@
     "final": "best image after SRD (or ravel if SRD disabled)"
   },
   "srd": {
-    "converged": false,
-    "convergence_round": null,
-    "final_gsi": 0.6667,
+    "converged": true,
+    "convergence_round": 3,
+    "final_gsi": 0.8667,
     "gsi_trajectory": [
-      0.2667,
-      0.5333,
-      0.6667
+      0.4667,
+      0.6000,
+      0.8667
     ],
     "rounds": [
       {
         "round": 1,
-        "image": "02_srd_r1_gsi0.27.png",
-        "gsi": 0.2667,
+        "image": "02_srd_r1_gsi0.47.png",
+        "gsi": 0.4667,
         "decay": 0.9,
         "converged": false,
         "escape": false,
         "present_attrs": [
           "large flat disc-shaped hat with dramatically flared wide brim, constructed over a basketry foundation of woven grass, cotton string, or human hair",
           "extraordinarily wide flat circular disc brim extending 30–60cm in diameter, far beyond the width of the head",
+          "constructed by overlaying dyed string over a coiled basketry foundation",
+          "beaded decorative strips along lower rim edge known as umqhwazi or isembozo",
           "rigid structured form that maintains its disc shape permanently",
+          "black",
           "natural straw yellow"
         ],
         "missing_attrs": [
           "tilted at an angle when worn rather than sitting flat on top",
-          "constructed by overlaying dyed string over a coiled basketry foundation",
           "reddish-ochre coloration from red oxide and animal fat mixture applied to surface",
-          "beaded decorative strips along lower rim edge known as umqhwazi or isembozo",
           "beaded rosettes attached to sides or top in later 20th century versions",
           "deep red-ochre",
           "burnt sienna",
-          "black",
           "earthy brown",
           "tightly woven basketry surface, smooth and rigid, with matte ochre finish from red oxide coating",
           "brim diameter 30–60cm, worn tilted at an angle on top of the head; historically larger, evolved to smaller sizes by mid-20th century"
@@ -77,8 +77,8 @@
       },
       {
         "round": 2,
-        "image": "03_srd_r2_gsi0.53.png",
-        "gsi": 0.5333,
+        "image": "03_srd_r2_gsi0.60.png",
+        "gsi": 0.6000,
         "decay": 0.5,
         "converged": false,
         "escape": false,
@@ -87,46 +87,46 @@
           "extraordinarily wide flat circular disc brim extending 30–60cm in diameter, far beyond the width of the head",
           "tilted at an angle when worn rather than sitting flat on top",
           "constructed by overlaying dyed string over a coiled basketry foundation",
+          "beaded decorative strips along lower rim edge known as umqhwazi or isembozo",
           "beaded rosettes attached to sides or top in later 20th century versions",
           "rigid structured form that maintains its disc shape permanently",
           "black",
+          "natural straw yellow",
           "brim diameter 30–60cm, worn tilted at an angle on top of the head; historically larger, evolved to smaller sizes by mid-20th century"
         ],
         "missing_attrs": [
           "reddish-ochre coloration from red oxide and animal fat mixture applied to surface",
-          "beaded decorative strips along lower rim edge known as umqhwazi or isembozo",
           "deep red-ochre",
           "burnt sienna",
-          "natural straw yellow",
           "earthy brown",
           "tightly woven basketry surface, smooth and rigid, with matte ochre finish from red oxide coating"
         ]
       },
       {
         "round": 3,
-        "image": "04_srd_r3_gsi0.67.png",
-        "gsi": 0.6667,
+        "image": "04_srd_r3_gsi0.87.png",
+        "gsi": 0.8667,
         "decay": 0.3333,
-        "converged": false,
+        "converged": true,
         "escape": false,
         "present_attrs": [
           "large flat disc-shaped hat with dramatically flared wide brim, constructed over a basketry foundation of woven grass, cotton string, or human hair",
           "extraordinarily wide flat circular disc brim extending 30–60cm in diameter, far beyond the width of the head",
           "tilted at an angle when worn rather than sitting flat on top",
           "constructed by overlaying dyed string over a coiled basketry foundation",
+          "reddish-ochre coloration from red oxide and animal fat mixture applied to surface",
           "beaded decorative strips along lower rim edge known as umqhwazi or isembozo",
-          "beaded rosettes attached to sides or top in later 20th century versions",
           "rigid structured form that maintains its disc shape permanently",
+          "deep red-ochre",
+          "burnt sienna",
           "black",
-          "natural straw yellow",
+          "earthy brown",
+          "tightly woven basketry surface, smooth and rigid, with matte ochre finish from red oxide coating",
           "brim diameter 30–60cm, worn tilted at an angle on top of the head; historically larger, evolved to smaller sizes by mid-20th century"
         ],
         "missing_attrs": [
-          "reddish-ochre coloration from red oxide and animal fat mixture applied to surface",
-          "deep red-ochre",
-          "burnt sienna",
-          "earthy brown",
-          "tightly woven basketry surface, smooth and rigid, with matte ochre finish from red oxide coating"
+          "beaded rosettes attached to sides or top in later 20th century versions",
+          "natural straw yellow"
         ]
       }
     ]
